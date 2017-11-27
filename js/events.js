@@ -7,14 +7,16 @@ function getIt(){
 }
 
 function frameIt(){
-  $().on('frame', function(){
+  $().on('load', function(){
     alert()
   })
 }
 
 function pressIt(){
-  $().on('press', function(){
-    alert()
+  $().on('keydown', function(e){
+    if (e.which === 71){
+      alert("You have pressed g")
+    }
   })
 }
 
